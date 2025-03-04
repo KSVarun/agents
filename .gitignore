@@ -1,4 +1,5 @@
 venv
 csv
+uploads
 chartOutput
 .env
