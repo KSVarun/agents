@@ -9,8 +9,7 @@ from llama_index.llms.openai import OpenAI
 from llama_index.agent.openai import OpenAIAgent
 from llama_index.core.tools import FunctionTool
 import numpy as np
-
-
+from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 app = FastAPI()
@@ -18,6 +17,14 @@ app = FastAPI()
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 os.environ["OPENAI_API_KEY"] = os.getenv('OAK')
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all methods
+    allow_headers=["*"],  # Allow all headers
+)
 
 class CSVAgent:
     def __init__(self, csv_path: str = None, csv_data: pd.DataFrame = None):

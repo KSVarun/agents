@@ -1,0 +1,70 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: calc(100% - 40px);
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.messagesSection {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: auto;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 60%;
+  text-wrap: wrap;
+  margin-bottom: 15px;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.userMessage {
+  align-self: flex-end;
+  background: gray;
+}
+
+.backendMessage {
+  align-self: flex-start;
+  background: darkslategrey;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+button {
+  height: 40px;
+}
+
+textarea {
+  width: calc(100% - 110px);
+  resize: none;
+  font-family: inherit;
+  font-size: 18px;
+  padding: 8px;
+  overflow-y: auto;
+  min-height: 21px;
+  max-height: 200px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100vw - 55px);
+  padding: 0px 20px 20px 20px;
+  background-color: #242424;
+}

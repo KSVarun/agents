@@ -3,3 +3,5 @@ csv
 uploads
 chartOutput
 .env
+node_modules
+*.pyc
